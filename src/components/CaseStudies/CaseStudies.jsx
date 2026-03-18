@@ -6,28 +6,32 @@ import styles from './CaseStudies.module.css';
  * Desktop: 407:3843 | Mobile: 432:3153
  * Carrossel infinito: 4 cards desktop, 2 tablet, 1 mobile
  */
-const PLACEHOLDER = 'https://www.figma.com/api/mcp/asset/0aeedb75-4afd-4768-8217-ad6506dd153c';
-const ICON        = 'https://www.figma.com/api/mcp/asset/7d689bb7-7012-4595-bea9-2b7d70ec1eba';
+const ICON = 'https://www.figma.com/api/mcp/asset/7d689bb7-7012-4595-bea9-2b7d70ec1eba';
 
 const cases = [
   {
     name: 'Brinks',
+    image: '/case-brinks.png',
     description: 'Reduzimos o tempo de precificação de propostas com um sistema inteligente que substituiu planilhas manuais por uma calculadora instantânea.',
   },
   {
     name: 'Amcham Brasil',
+    image: '/case-amcham.png',
     description: 'Desenvolvemos um CMS proprietário e robusto, com UX/UI 100% customizado que já está na 2ª versão, com implementamos melhorias contínuas.',
   },
   {
     name: 'Pontua AI',
+    image: '/case-pontua.png',
     description: 'Criamos uma plataforma de inteligência artificial educacional que corrige redações com velocidade, critérios ajustáveis e dashboards de desempenho.',
   },
   {
     name: 'Soacred',
+    image: '/case-soacred.png',
     description: 'Transformamos a rotina de lojistas com um app intuitivo que integra crédito, cadastros e transparência em tempo real.',
   },
   {
     name: 'Propwase',
+    image: '/case-propwase.png',
     description: 'Centralizamos CRM, leads e gestão imobiliária em uma única plataforma com IA e automação total.',
   },
 ];
@@ -178,7 +182,7 @@ export default function CaseStudies() {
                   data-name={c.name}
                 >
                   <div className={styles.caseImageWrapper} data-name="Placeholder Image">
-                    <img src={PLACEHOLDER} alt={c.name} className={styles.caseImage} />
+                    <img src={c.image} alt={c.name} className={styles.caseImage} />
                   </div>
                   <div className={styles.caseContent} data-name="Content">
                     <h3 className={styles.caseTitle}>{c.name}</h3>
