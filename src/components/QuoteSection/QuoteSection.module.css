@@ -1,0 +1,115 @@
+/* QuoteSection — Layout / 136 (quote) — 404:3476 */
+
+.section {
+  background-color: var(--gray-white);
+  width: 100%;
+  padding: var(--section-padding-lg) var(--container-padding-desktop);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-32);
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-16);
+  align-items: center;
+  width: 100%;
+}
+
+.symbolIcon {
+  width: 48px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-24);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--blue-500);
+  margin: 0;
+}
+
+.subHeading {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--gray-grey-750);
+  margin: 0;
+}
+
+/* CTA */
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--button-padding-tb-lg) var(--button-padding-lr-lg);
+  background: var(--button-filled-bg);
+  border-radius: var(--button-radius-md);
+  text-decoration: none;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.ctaStateLayer {
+  position: absolute;
+  inset: 0;
+  background: var(--elevation-0);
+  pointer-events: none;
+}
+
+.ctaLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--button-filled-content);
+  white-space: nowrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--section-padding-md) var(--container-padding-mobile);
+  }
+
+  .heading {
+    font-size: var(--font-size-body-xl);
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+}

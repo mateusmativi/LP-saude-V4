@@ -1,0 +1,101 @@
+/* ============================================================
+   CSS Custom Properties — Fraktal LP (Saúde)
+   Mapeamento dos tokens do Figma para variáveis CSS globais
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;700&family=Saira:wght@400;600&display=swap');
+
+:root {
+  /* ---- Cores ---- */
+  --blue-900: #0a0d29;
+  --blue-500: #021fff;
+  --blue-400: #557ef6;
+  --blue-100: #e7ecfd;
+
+  --gray-white: #ffffff;
+  --gray-grey-750: #40455f;
+  --gray-grey-900: #0a0d29;
+
+  --elevation-0: rgba(255, 255, 255, 0.02);
+
+  /* ---- Tipografia ---- */
+  --font-family-heading: 'Funnel Display', sans-serif;
+  --font-family-body: 'Saira', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-heading-xl: 64px;
+  --font-size-heading-lg: 48px;
+  --font-size-heading-md: 40px;
+  --font-size-heading-sm: 32px;
+  --font-size-body-xl: 20px;
+  --font-size-body-lg: 18px;
+  --font-size-body-md: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-body-xs: 12px;
+
+  --line-height-heading: 1.2;
+  --line-height-body: 1.5;
+
+  /* ---- Espaçamentos ---- */
+  --container-padding-desktop: 128px;
+  --container-padding-mobile: 16px;
+  --section-padding-lg: 80px;
+  --section-padding-md: 64px;
+  --section-padding-sm: 48px;
+
+  --gap-80: 80px;
+  --gap-64: 64px;
+  --gap-48: 48px;
+  --gap-40: 40px;
+  --gap-32: 32px;
+  --gap-24: 24px;
+  --gap-20: 20px;
+  --gap-16: 16px;
+  --gap-12: 12px;
+  --gap-8:  8px;
+  --gap-4:  4px;
+
+  /* ---- Botões ---- */
+  --button-filled-bg: #021fff;
+  --button-filled-content: #ffffff;
+  --button-stroked-border: #021fff;
+  --button-stroked-content: #4b5170;
+
+  --button-padding-lr-lg: 24px;
+  --button-padding-tb-lg: 16px;
+  --button-padding-lr-sm: 16px;
+  --button-padding-tb-sm: 12px;
+
+  --button-radius-sm: 2px;
+  --button-radius-md: 8px;
+
+  /* ---- Breakpoints (para referência em JS) ---- */
+  --bp-mobile: 375px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1440px;
+}
+
+/* ---- Reset / Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  color: var(--gray-grey-750);
+  background-color: var(--gray-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}

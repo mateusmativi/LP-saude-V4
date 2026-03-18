@@ -1,0 +1,254 @@
+/* Hero — 398:3349 */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 810px;
+  background: white;
+  border: 1px solid var(--blue-500);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Background */
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 4.18%;
+  width: 106.77%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+}
+
+.bgGradient {
+  position: absolute;
+  inset: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Content */
+.mainContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px var(--container-padding-desktop) 64px;
+  justify-content: center;
+}
+
+.contentContainer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text column */
+.textAndButtonContainer {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.headline {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--gray-white);
+  margin: 0;
+  width: 100%;
+}
+
+.headlineHighlight {
+  color: white;
+}
+
+.subHeadline {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--gray-white);
+  width: 100%;
+}
+
+.bodyText {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--blue-100);
+  width: 100%;
+}
+
+/* CTA button */
+.ctaButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--button-padding-tb-lg) var(--button-padding-lr-lg);
+  background: var(--button-filled-bg);
+  border-radius: var(--button-radius-md);
+  text-decoration: none;
+  width: 224px;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.ctaStateLayer {
+  position: absolute;
+  inset: 0;
+  background: var(--elevation-0);
+  pointer-events: none;
+}
+
+.ctaIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.ctaLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--button-filled-content);
+  white-space: nowrap;
+}
+
+/* Tagline / footer block */
+.footerContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footerBar {
+  width: 6px;
+  height: 58px;
+  background: var(--blue-400);
+  border-radius: 0 8px 8px 0;
+  flex-shrink: 0;
+}
+
+.footerText {
+  font-family: var(--font-family-heading);
+  font-size: 24px;
+  line-height: normal;
+  color: white;
+  width: 554px;
+}
+
+.footerTextLight {
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+}
+
+.footerTextBold {
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
+}
+
+/* Hero image — empty slot for the photo */
+.heroImage {
+  width: 582px;
+  height: 582px;
+  flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 706px;
+    border: none;
+  }
+
+  .bgImage {
+    left: -50.4%;
+    width: 174.72%;
+    height: 48.65%;
+    top: 0;
+  }
+
+  .mainContainer {
+    padding: 144px var(--container-padding-mobile) 64px;
+    justify-content: flex-start;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .textAndButtonContainer {
+    gap: 32px;
+  }
+
+  .headline {
+    font-size: var(--font-size-heading-sm);
+  }
+
+  .subHeadline {
+    font-size: var(--font-size-body-md);
+  }
+
+  .bodyText {
+    font-size: var(--font-size-body-sm);
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+
+  .footerText {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .heroImage {
+    display: none;
+  }
+}

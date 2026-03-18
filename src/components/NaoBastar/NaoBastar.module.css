@@ -1,0 +1,202 @@
+/* NaoBastar — Layout / 69 / — 404:2819 */
+
+.section {
+  position: relative;
+  background-color: var(--blue-500);
+  width: 100%;
+  padding: var(--section-padding-lg) var(--container-padding-desktop);
+  overflow: hidden;
+}
+
+/* Decorative pattern (top-right) */
+.patternWrapper {
+  position: absolute;
+  right: -241px;
+  top: -267px;
+  width: 609px;
+  height: 608px;
+  transform: rotate(-150deg);
+  pointer-events: none;
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Main layout */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+/* Left column */
+.column {
+  flex: 0 0 552px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.heading {
+  margin-bottom: 32px;
+}
+
+.headingText {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: white;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.intro {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: white;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.listIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.listLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: white;
+}
+
+.bodyText {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: white;
+}
+
+.bodyText strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/* CTA Button */
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--button-padding-tb-lg) var(--button-padding-lr-lg);
+  background: white;
+  border-radius: var(--button-radius-md);
+  text-decoration: none;
+  width: 224px;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.ctaStateLayer {
+  position: absolute;
+  inset: 0;
+  background: var(--elevation-0);
+  pointer-events: none;
+}
+
+.ctaLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--blue-500);
+  white-space: nowrap;
+}
+
+/* Right column — image */
+.imageCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--section-padding-md) var(--container-padding-mobile);
+    gap: 32px;
+  }
+
+  .patternWrapper {
+    right: -241px;
+    top: -267px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* On mobile the image comes first (matches Figma 375px layout) */
+  .imageCol {
+    order: -1;
+    width: 100%;
+  }
+
+  .image {
+    height: 350px;
+    border-radius: 8px;
+  }
+
+  .column {
+    flex: none;
+    width: 100%;
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+}
