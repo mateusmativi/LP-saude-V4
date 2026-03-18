@@ -1,0 +1,381 @@
+/* GrandesEmpresas — Layout / 15 / — 447:1977 (desktop) / 447:2000 (mobile) */
+
+.section {
+  background-color: var(--gray-white);
+  width: 100%;
+  padding: 112px var(--container-padding-desktop);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1184px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 2-column layout */
+.component {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ---- Left column ---- */
+.content {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Heading */
+.sectionTitle {
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-md);    /* 40px */
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--blue-900);
+  margin: 0;
+}
+
+.headingHighlight {
+  color: var(--blue-500);
+}
+
+/* Logo grid */
+.logoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* Base logo item */
+.logoItem {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Logo overflow helper */
+.logoOverflow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.logoCoverImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* ---- Individual logo dimensions (desktop) ---- */
+.logoBankly      { width: 97.09px;  height: 39.81px; }
+.logoJohnDeere   { width: 201.63px; height: 39.64px; }
+.logoBravia      { width: 182px;    height: 46px;    }
+.logoAmcham      { width: 211.47px; height: 29.68px; overflow: clip; }
+.logoBrinks      { width: 191.77px; height: 33.02px; }
+.logoElectrolux  { width: 158.30px; height: 39.73px; }
+.logoValley      { width: 163.56px; height: 33.01px; }
+
+/* John Deere — clip com imagem posicionada */
+.logoJohnDeereImg {
+  position: absolute;
+  left: 0;
+  top: -204.09%;
+  width: 100%;
+  height: 508.19%;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Bravia */
+.logoBraviaImg {
+  position: absolute;
+  left: 1.9%;
+  top: 7.28%;
+  width: 96.35%;
+  height: 86.08%;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Brinks */
+.logoBrinksImg {
+  position: absolute;
+  left: 1.36%;
+  top: 0;
+  width: 98.36%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Electrolux */
+.logoElectroluxImg {
+  position: absolute;
+  left: -0.02%;
+  top: -62.12%;
+  width: 100.04%;
+  height: 224.24%;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Amcham — 6 vetores sobrepostos */
+.logoAmchamVector {
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* rufy */
+.logoRufy        { width: 107.63px; height: 39.65px; }
+
+.rufyInner {
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  place-items: start;
+  position: relative;
+  line-height: 0;
+}
+
+.rufyImg40 {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  width: 40.71px;
+  height: 39.65px;
+  overflow: hidden;
+}
+
+.rufyImg40Img {
+  position: absolute;
+  left: -38.32%;
+  top: -32.14%;
+  width: 336.63%;
+  height: 163.39%;
+  max-width: none;
+  pointer-events: none;
+}
+
+.rufyMask {
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 40.71px;
+  margin-top: -9.91px;
+  width: 82.85px;
+  height: 66.20px;
+  background-color: #2b21aa;
+  -webkit-mask-size: 66.91px 39.65px;
+  mask-size: 66.91px 39.65px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 0px 9.91px;
+  mask-position: 0px 9.91px;
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+/* Valley */
+.valleyInner {
+  position: absolute;
+  inset: -0.01% 0.09% 0.8% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valleyG12 {
+  flex-shrink: 0;
+  width: 245.35px;
+  height: 49.17px;
+  transform: scaleY(-1);
+}
+
+.valleyG12Img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+/* Body text */
+.bodyText {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-lg);    /* 18px */
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--gray-grey-750);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bodyText p {
+  margin: 0;
+}
+
+/* CTA */
+.ctaButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--button-padding-tb-lg) var(--button-padding-lr-lg);
+  background: var(--button-filled-bg);
+  border-radius: var(--button-radius-md);
+  text-decoration: none;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover { opacity: 0.9; }
+
+.ctaStateLayer {
+  position: absolute;
+  inset: 0;
+  background: var(--elevation-0);
+  pointer-events: none;
+}
+
+.ctaLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--button-filled-content);
+  white-space: nowrap;
+}
+
+/* CTA visibility: desktop inside left col, mobile outside */
+.ctaMobile { display: none; }
+.ctaDesktop { display: inline-flex; }
+
+/* ---- Right column — image ---- */
+.imageCol {
+  flex: 1 0 0;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 600 / 640;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px var(--container-padding-mobile);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  /* Stack columns */
+  .component {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .content {
+    gap: 24px;
+    width: 100%;
+  }
+
+  /* Heading smaller on mobile */
+  .heading {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  /* Logo wrapper centers on mobile */
+  .logoWrapper {
+    align-content: center;
+    align-items: center;
+  }
+
+  /* Scale logos down proportionally for 375px */
+  .logoBankly      { width: 66.65px;  height: 27.33px; }
+  .logoJohnDeere   { width: 138.41px; height: 27.21px; }
+  .logoBravia      { width: 124.94px; height: 31.58px; }
+  .logoAmcham      { width: 136.06px; height: 19.10px; }
+  .logoBrinks      { width: 131.64px; height: 22.67px; }
+  .logoRufy        { width: 73.88px;  height: 27.22px; }
+  .logoElectrolux  { width: 115.47px; height: 28.98px; }
+  .logoValley      { width: 119.31px; height: 24.08px; }
+
+  /* rufy mask scaled */
+  .rufyImg40       { width: 27.95px; height: 27.22px; }
+  .rufyMask {
+    margin-left: 27.95px;
+    margin-top: -6.8px;
+    width: 56.87px;
+    height: 45.45px;
+    -webkit-mask-size: 45.93px 27.22px;
+    mask-size: 45.93px 27.22px;
+    -webkit-mask-position: 0px 6.8px;
+    mask-position: 0px 6.8px;
+  }
+
+  /* Valley scaled */
+  .valleyG12 {
+    width: 178.97px;
+    height: 35.87px;
+  }
+
+  /* Body text smaller */
+  .bodyText {
+    font-size: var(--font-size-body-md);
+  }
+
+  /* Image full width, aspect-ratio from mobile spec */
+  .imageCol {
+    width: 100%;
+    flex: none;
+    aspect-ratio: 335 / 348;
+  }
+
+  /* CTA swap */
+  .ctaDesktop { display: none; }
+  .ctaMobile  {
+    display: flex;
+    width: 100%;
+    border-radius: var(--button-radius-sm);
+  }
+}

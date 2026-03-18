@@ -8,6 +8,7 @@ import QuoteSection from '../../components/QuoteSection/QuoteSection';
 import CaseStudies from '../../components/CaseStudies/CaseStudies';
 import FeaturesSection from '../../components/FeaturesSection/FeaturesSection';
 import TeamSection from '../../components/TeamSection/TeamSection';
+import GrandesEmpresas from '../../components/GrandesEmpresas/GrandesEmpresas';
 import styles from './SaudePage.module.css';
 
 /**
@@ -25,7 +26,8 @@ import styles from './SaudePage.module.css';
  * 7. QuoteSection    — 404:3476  (Layout / 136 / — variante quote)
  * 8. CaseStudies     — 404:3497  (Layout / 313 /)
  * 9. FeaturesSection — 404:3518  (Layout / 612 /)
- * 10. TeamSection    — 404:3541  (Layout / 521 /)
+ * 10. TeamSection      — 404:3541  (Layout / 521 /)
+ * 11. GrandesEmpresas — 447:1977  (Layout / 15 /)
  */
 export default function SaudePage() {
   return (
@@ -41,6 +43,7 @@ export default function SaudePage() {
         <CaseStudies />
         <FeaturesSection />
         <TeamSection />
+        <GrandesEmpresas />
       </main>
     </div>
   );
