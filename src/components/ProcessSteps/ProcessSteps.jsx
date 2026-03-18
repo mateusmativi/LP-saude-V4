@@ -95,18 +95,11 @@ export default function ProcessSteps() {
           </p>
         </div>
 
-        {/* Cards — 3 top + 2 bottom centered */}
+        {/* Cards — flex-wrap: 3 cima + 2 baixo centralizados automaticamente */}
         <div className={styles.cardWrapper} data-name="Card Wrapper">
-          <div className={styles.row}>
-            {steps.slice(0, 3).map((step) => (
-              <StepCard key={step.title} step={step} />
-            ))}
-          </div>
-          <div className={`${styles.row} ${styles.rowBottom}`}>
-            {steps.slice(3).map((step) => (
-              <StepCard key={step.title} step={step} />
-            ))}
-          </div>
+          {steps.map((step) => (
+            <StepCard key={step.title} step={step} />
+          ))}
         </div>
 
         {/* CTA */}

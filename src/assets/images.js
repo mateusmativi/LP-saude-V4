@@ -16,7 +16,7 @@ export const desktop = {
 
   // Header icons
   bedtime:         'https://www.figma.com/api/mcp/asset/03e8d442-67c1-4101-a0c3-3dc0a934d8d5',
-  personOutline:   'https://www.figma.com/api/mcp/asset/ce95ce7e-2e7d-4a2d-8343-48c527415ecd',
+  personOutline:   'https://www.figma.com/api/mcp/asset/8b785ffb-98bd-448b-ae59-2b9a03c55fe7',
   vector:          'https://www.figma.com/api/mcp/asset/1ab4bd61-eb4c-47e2-a6c1-0b66bd7f0a43',
   vector1:         'https://www.figma.com/api/mcp/asset/0ab12af9-34c6-4564-ba66-0b6d27603eac',
   flagGroup:       'https://www.figma.com/api/mcp/asset/75d76778-0271-4634-b26a-99f35a98b48d',
@@ -30,7 +30,7 @@ export const desktop = {
   calendarMonth:      'https://www.figma.com/api/mcp/asset/14795f19-7a4f-4c60-970a-a2861ac2a5e7',
   recentPatient:      'https://www.figma.com/api/mcp/asset/5af9acc0-a56a-4725-91bb-1d6dc19b78f3',
   overviewKey:        'https://www.figma.com/api/mcp/asset/91e7039d-cd68-4128-87ed-34a205724f43',
-  checkBox:           'https://www.figma.com/api/mcp/asset/b14d07b7-e2d8-4a9f-9c6c-71eb0fc38d1d',
+  checkBox:           'https://www.figma.com/api/mcp/asset/d5475598-4606-47fc-96cf-a40d416c5318',
   image:              'https://www.figma.com/api/mcp/asset/1abe6022-0dcf-4f43-bf4d-013a76406334',
 
   // Layout/526 — Process steps
@@ -56,10 +56,10 @@ export const desktop = {
   logo06:          'https://www.figma.com/api/mcp/asset/2e76eeff-e576-40b9-95ba-9e627db62b22',
 
   // Features / Layout/612
-  analytics:       'https://www.figma.com/api/mcp/asset/b141a684-73d0-4ec2-b80c-f2a57d653383',
-  task:            'https://www.figma.com/api/mcp/asset/616732e2-c16a-48ff-8ef6-a7be2dc34f2d',
-  engineering:     'https://www.figma.com/api/mcp/asset/e95b6d04-2661-4eb0-93bc-1bdf220f3b87',
-  paid:            'https://www.figma.com/api/mcp/asset/a650c640-8059-42b4-8287-8dc4a82af955',
+  analytics:       'https://www.figma.com/api/mcp/asset/e282f82c-a06e-4fb5-b8f7-c6e73e0273c6',
+  task:            'https://www.figma.com/api/mcp/asset/c54c23f9-83f9-4600-82de-e4d8c6a75196',
+  engineering:     'https://www.figma.com/api/mcp/asset/ca930206-12fa-4194-92a3-67d0ae85a406',
+  paid:            'https://www.figma.com/api/mcp/asset/2ea64ae2-1bd9-43bc-98d3-96b54faff799',
 
   // Team / Layout/521
   chessBishop:     'https://www.figma.com/api/mcp/asset/63c5c5f6-93c4-4eb9-94f4-203bd7ebed6d',

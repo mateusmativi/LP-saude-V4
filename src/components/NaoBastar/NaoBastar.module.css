@@ -4,8 +4,8 @@
   position: relative;
   background-color: var(--blue-500);
   width: 100%;
-  padding: var(--section-padding-lg) var(--container-padding-desktop);
   overflow: hidden;
+  /* sem padding — cada coluna gerencia seu próprio espaçamento */
 }
 
 /* Decorative pattern (top-right) */
@@ -30,19 +30,18 @@
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 80px;
-  align-items: flex-start;
+  align-items: stretch; /* colunas têm a mesma altura */
   width: 100%;
-  max-width: 1184px;
-  margin: 0 auto;
+  min-height: 560px;
 }
 
-/* Left column */
+/* Right column — texto */
 .column {
-  flex: 0 0 552px;
+  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   gap: 0;
+  padding: var(--section-padding-lg) var(--container-padding-desktop) var(--section-padding-lg) 64px;
 }
 
 .heading {
@@ -52,10 +51,14 @@
 .headingText {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-heading-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-height-heading);
   color: white;
   margin: 0;
+}
+
+.headingText strong {
+  font-weight: var(--font-weight-bold);
 }
 
 .content {
@@ -128,6 +131,7 @@
   width: 224px;
   overflow: hidden;
   transition: opacity 0.2s;
+  color: var(--blue-500);
 }
 
 .ctaButton:hover {
@@ -138,8 +142,6 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  /* Colorize icon to --blue-500 (#021fff) */
-  filter: brightness(0) saturate(100%) invert(13%) sepia(96%) saturate(7481%) hue-rotate(234deg) brightness(102%);
 }
 
 .ctaStateLayer {
@@ -158,10 +160,18 @@
   white-space: nowrap;
 }
 
-/* Right column — image */
+/* Left column — imagem com padding lateral esquerdo e padding vertical via imageWrapper */
 .imageCol {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: stretch;
+  padding: 0 0 0 var(--container-padding-desktop);
+}
+
+.imageWrapper {
   flex: 1;
-  min-width: 0;
+  display: flex;
+  padding: 32px 0;
 }
 
 .image {
@@ -169,39 +179,31 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 768px) {
-  .section {
-    padding: var(--section-padding-md) var(--container-padding-mobile);
-    gap: 32px;
-  }
-
-  .patternWrapper {
-    right: -241px;
-    top: -267px;
-  }
-
+@media (max-width: 800px) {
   .container {
     flex-direction: column;
-    gap: 32px;
+    min-height: unset;
   }
 
-  /* On mobile the image comes first (matches Figma 375px layout) */
+  /* Imagem acima do texto (já é primeiro no DOM) */
   .imageCol {
-    order: -1;
+    flex: none;
     width: 100%;
+    padding: 0 var(--container-padding-mobile);
   }
 
   .image {
-    height: 350px;
-    border-radius: 8px;
+    height: 280px;
   }
 
   .column {
     flex: none;
     width: 100%;
+    padding: var(--section-padding-md) var(--container-padding-mobile);
   }
 
   .ctaButton {

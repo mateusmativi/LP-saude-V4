@@ -25,7 +25,7 @@
 .titleWrapper {
   grid-area: title;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .heading {
@@ -45,7 +45,8 @@
 .descBlock {
   grid-area: desc;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  align-self: center;
   gap: var(--gap-16);
 }
 
@@ -69,21 +70,52 @@
   color: var(--gray-grey-750);
 }
 
-/* ---- Cases row ---- */
-.casesRow {
+/* ---- Carousel ---- */
+.carouselWrapper {
   grid-area: cards;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
-  justify-content: center;
-  gap: var(--gap-24);
+  display: flex;
+  align-items: center;
+  gap: 16px;
   width: 100%;
+}
+
+.arrowBtn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-grey-150);
+  background: var(--gray-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--blue-500);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.arrowBtn:hover {
+  background-color: var(--blue-500);
+  border-color: var(--blue-500);
+  color: white;
+}
+
+.carouselViewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 24px;
+  will-change: transform;
 }
 
 /* ---- Case card ---- */
 .caseCard {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  min-width: 0;
 }
 
 .caseImageWrapper {
@@ -208,8 +240,9 @@
   }
 }
 
-@media (max-width: 428px) {
-  .casesRow {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .arrowBtn {
+    width: 36px;
+    height: 36px;
   }
 }

@@ -46,31 +46,17 @@
 /* ---- Card layout ---- */
 .cardWrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--gap-24);
-  width: 100%;
-}
-
-.row {
-  display: flex;
-  gap: var(--gap-24);
-  align-items: stretch;
-  width: 100%;
-}
-
-/* Bottom row: 2 cards centered, same width as top-row cards */
-.rowBottom {
   justify-content: center;
-}
-
-.rowBottom .stepCard {
-  flex: 0 0 calc((100% - var(--gap-24) * 2) / 3);
-  max-width: calc((100% - var(--gap-24) * 2) / 3);
+  width: 100%;
 }
 
 /* ---- Step card ---- */
 .stepCard {
-  flex: 1;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 260px;
+  max-width: calc(33.333% - 16px);
   display: flex;
   flex-direction: column;
   gap: var(--gap-16);
@@ -161,24 +147,10 @@
     padding: var(--section-padding-md) var(--container-padding-mobile);
   }
 
-  .cardWrapper {
-    gap: var(--gap-24);
-  }
-
-  .row,
-  .rowBottom {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .rowBottom .stepCard {
-    flex: none;
-    max-width: 100%;
-    width: 100%;
-  }
-
   .stepCard {
+    flex: none;
     width: 100%;
+    min-width: unset;
   }
 
   .ctaButton {

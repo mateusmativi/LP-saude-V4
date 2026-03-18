@@ -72,7 +72,7 @@
   font-size: var(--font-size-heading-md);
   font-weight: var(--font-weight-bold);
   line-height: normal;
-  color: var(--blue-500);
+  color: var(--gray-grey-800, #34384e);
   margin: 0;
 }
 

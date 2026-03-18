@@ -7,6 +7,14 @@ import styles from './Hero.module.css';
  * Mobile: layout single column, hero full width
  * Node IDs: 398:3349 (desktop), 432:2468 (mobile)
  */
+function CheckBoxIcon({ className }) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className={className}>
+      <path d="M12.6667 2H3.33333C2.6 2 2 2.6 2 3.33333V12.6667C2 13.4 2.6 14 3.33333 14H12.6667C13.4 14 14 13.4 14 12.6667V3.33333C14 2.6 13.4 2 12.6667 2ZM12.6667 12.6667H3.33333V3.33333H12.6667V12.6667ZM11.9933 6L11.0533 5.05333L6.66 9.44667L4.94 7.73333L3.99333 8.67333L6.66 11.3333L11.9933 6Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section
@@ -55,12 +63,7 @@ export default function Hero() {
                 data-node-id="398:3362"
               >
                 <span className={styles.ctaStateLayer} data-name="stateLayer" />
-                <img
-                  src={desktop.personOutline}
-                  alt=""
-                  aria-hidden="true"
-                  className={styles.ctaIcon}
-                />
+                <CheckBoxIcon className={styles.ctaIcon} />
                 <span className={styles.ctaLabel}>Fale conosco</span>
               </a>
             </div>

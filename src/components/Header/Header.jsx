@@ -19,6 +19,14 @@ const navLinks = [
   { label: 'Sobre',     href: '#sobre',     chevron: false },
 ];
 
+function PersonOutlineIcon({ className }) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className={className}>
+      <path d="M7.99935 3.93332C8.77268 3.93332 9.39935 4.55999 9.39935 5.33332C9.39935 6.10666 8.77268 6.73332 7.99935 6.73332C7.22602 6.73332 6.59935 6.10666 6.59935 5.33332C6.59935 4.55999 7.22602 3.93332 7.99935 3.93332ZM7.99935 9.93332C9.97935 9.93332 12.066 10.9067 12.066 11.3333V12.0667H3.93268V11.3333C3.93268 10.9067 6.01935 9.93332 7.99935 9.93332ZM7.99935 2.66666C6.52602 2.66666 5.33268 3.85999 5.33268 5.33332C5.33268 6.80666 6.52602 7.99999 7.99935 7.99999C9.47268 7.99999 10.666 6.80666 10.666 5.33332C10.666 3.85999 9.47268 2.66666 7.99935 2.66666ZM7.99935 8.66666C6.21935 8.66666 2.66602 9.55999 2.66602 11.3333V13.3333H13.3327V11.3333C13.3327 9.55999 9.77935 8.66666 7.99935 8.66666Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 function ChevronDown() {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" className={styles.chevron}>
@@ -81,7 +89,7 @@ export default function Header() {
             <NightModeButton />
             <a href="#area-cliente" className={styles.clientButton} data-name="buttonsLightMode" data-node-id="398:3339">
               <span className={styles.clientButtonStateLayer} />
-              <img src={desktop.personOutline} alt="" aria-hidden="true" className={styles.clientButtonIcon} />
+              <PersonOutlineIcon className={styles.clientButtonIcon} />
               <span className={styles.clientButtonLabel}>Área do cliente</span>
             </a>
             <LangButton />
@@ -120,7 +128,7 @@ export default function Header() {
 
           <div className={styles.mobileMenuActions}>
             <a href="#area-cliente" className={styles.mobileClientButton} onClick={closeMenu}>
-              <img src={desktop.personOutline} alt="" aria-hidden="true" className={styles.clientButtonIcon} />
+              <PersonOutlineIcon className={styles.clientButtonIcon} />
               <span>Área do cliente</span>
             </a>
             <div className={styles.mobileMenuIcons}>
