@@ -1,36 +1,34 @@
-/* FeaturesSection — Layout / 612 / — 404:3518 */
+/* FeaturesSection — Layout / 612 / — 413:2758 */
 
 .section {
   background-color: var(--gray-white);
   width: 100%;
   padding: var(--section-padding-lg) var(--container-padding-desktop);
-  background: linear-gradient(135deg, #f8f9ff 0%, var(--gray-white) 100%);
 }
 
 .container {
   display: flex;
-  gap: 80px;
+  flex-direction: column;
+  gap: var(--gap-80);
   align-items: flex-start;
   max-width: 1184px;
   margin: 0 auto;
 }
 
-/* Left column */
-.leftCol {
-  flex: 0 0 400px;
+/* ---- Section title ---- */
+.sectionTitle {
   display: flex;
   flex-direction: column;
   gap: var(--gap-24);
   align-items: flex-start;
-  position: sticky;
-  top: 100px;
+  max-width: 800px;
 }
 
 .heading {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-heading-sm);
+  font-size: var(--font-size-heading-lg);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
+  line-height: normal;
   color: var(--blue-900);
   margin: 0;
 }
@@ -44,7 +42,74 @@
   margin: 0;
 }
 
-/* CTA */
+/* ---- Content block (list + CTA) ---- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-48);
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ---- Feature list ---- */
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: var(--gap-24);
+  align-items: flex-start;
+  padding: 48px 0;
+  width: 100%;
+  border-top: 1px solid #a8adc5;
+}
+
+/* ---- List item ---- */
+.listItem {
+  display: flex;
+  flex: 1;
+  gap: var(--gap-32);
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.itemIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-16);
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--blue-500);
+  margin: 0;
+}
+
+.itemDescription {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--gray-grey-750);
+  margin: 0;
+}
+
+/* ---- CTA ---- */
 .ctaButton {
   position: relative;
   display: inline-flex;
@@ -76,98 +141,36 @@
   pointer-events: none;
 }
 
-/* Right column — feature list */
-.rightCol {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-32);
-}
-
-.featureItem {
-  display: flex;
-  gap: var(--gap-24);
-  align-items: flex-start;
-  padding: var(--gap-32);
-  border: 1px solid var(--blue-100);
-  border-radius: 8px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.featureItem:hover {
-  border-color: var(--blue-400);
-  box-shadow: 0 4px 24px rgba(2, 31, 255, 0.08);
-}
-
-.featureIconWrapper {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  background: var(--blue-100);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.featureIcon {
-  width: 28px;
-  height: 28px;
-}
-
-.featureText {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-8);
-}
-
-.featureTitle {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
-  color: var(--blue-900);
-  margin: 0;
-}
-
-.featureDescription {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-md);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-body);
-  color: var(--gray-grey-750);
-  margin: 0;
-}
-
 /* ---- Responsive ---- */
-@media (max-width: 1024px) {
-  .leftCol {
-    flex: 0 0 320px;
-    position: static;
-  }
-}
-
 @media (max-width: 768px) {
   .section {
     padding: var(--section-padding-md) var(--container-padding-mobile);
   }
 
   .container {
-    flex-direction: column;
-    gap: var(--gap-40);
+    gap: var(--gap-48);
   }
 
-  .leftCol {
+  .heading {
+    font-size: var(--font-size-heading-sm);
+  }
+
+  .row {
+    flex-direction: column;
+    gap: var(--gap-40);
+    padding: var(--gap-32) 0;
+  }
+
+  .listItem {
     flex: none;
     width: 100%;
-    position: static;
+  }
+
+  .itemTitle {
+    font-size: var(--font-size-heading-xs);
   }
 
   .ctaButton {
     width: 100%;
-  }
-
-  .featureItem {
-    padding: var(--gap-16);
   }
 }

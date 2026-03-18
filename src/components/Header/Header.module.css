@@ -1,4 +1,4 @@
-/* Header — 398:3324 */
+/* Header — 398:3324 (desktop) / 429:2365 (mobile) */
 
 .header {
   background-color: var(--gray-white);
@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--gray-grey-150);
 }
 
 .inner {
@@ -14,37 +15,32 @@
   align-items: center;
   justify-content: space-between;
   height: 48px;
+  max-width: 1184px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-/* Logo */
+/* ---- Logo ---- */
 .logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  /* Largura derivada do viewBox 168×48 — mantém aspect ratio */
   height: 48px;
   width: 168px;
+  text-decoration: none;
 }
 
-/* SVG inline — altura fixa, largura automática via viewBox */
 .logoSvg {
   display: block;
   height: 48px;
-  width: auto; /* mantém aspect ratio 168:48 = 3.5:1 */
+  width: auto;
 }
 
-/* logoImg mantido para retrocompatibilidade caso necessário */
-.logoImg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Navigation */
+/* ---- Desktop navigation (>1024px) ---- */
 .navigation {
   display: flex;
   align-items: center;
-  gap: 77px;
+  gap: 56px;
   flex-shrink: 0;
 }
 
@@ -58,6 +54,9 @@
 }
 
 .siteLink {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-regular);
@@ -72,7 +71,12 @@
   color: var(--blue-500);
 }
 
-/* Client area buttons */
+.chevron {
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+/* ---- Client area buttons ---- */
 .clientAreaButton {
   display: flex;
   align-items: center;
@@ -172,92 +176,128 @@
   mask-position: center;
 }
 
-/* Hamburger — visible on mobile only */
-.hamburger {
+/* ---- Tablet actions (≤1024px): night mode + flag + hamburger ---- */
+.tabletActions {
   display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.hamburger {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   width: 44px;
   height: 44px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .hamburger img {
-  width: 100%;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
-/* Mobile menu */
+/* ---- Mobile menu dropdown ---- */
 .mobileMenu {
-  display: none;
-  flex-direction: column;
-  padding: 16px;
-  border-top: 1px solid var(--blue-100);
   background: var(--gray-white);
+  border-top: 1px solid var(--gray-grey-150);
+  padding: 8px var(--container-padding-desktop) 24px;
 }
 
-.mobileMenu ul {
+.mobileMenuList {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
 
 .mobileSiteLink {
-  display: block;
-  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
   color: var(--gray-grey-750);
   text-decoration: none;
-  border-bottom: 1px solid var(--blue-100);
+  border-bottom: 1px solid var(--gray-grey-150);
+  transition: color 0.2s;
+}
+
+.mobileSiteLink:hover {
+  color: var(--blue-500);
+}
+
+.mobileMenuActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  gap: 16px;
 }
 
 .mobileClientButton {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 16px;
+  gap: 8px;
   padding: var(--button-padding-tb-sm) var(--button-padding-lr-sm);
   border: 1px solid var(--button-stroked-border);
   border-radius: var(--button-radius-sm);
   background: transparent;
   text-decoration: none;
   font-family: var(--font-family-body);
-  font-size: var(--font-size-body-sm);
+  font-size: var(--font-size-body-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--button-stroked-content);
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.mobileClientButton:hover {
+  background-color: rgba(2, 31, 255, 0.05);
+}
+
+.mobileMenuIcons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* ---- Responsive ---- */
+
+/* Tablet (≤1024px): hide full nav, show compact actions */
+@media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+
+  .tabletActions {
+    display: flex;
+  }
+}
+
+/* Mobile (≤768px): reduce padding */
 @media (max-width: 768px) {
+  .header {
+    padding: 8px var(--container-padding-mobile);
+  }
+
   .logo {
     height: 36px;
-    width: 126px; /* 36 × 3.5 = 126px — aspect ratio preservado */
+    width: 126px;
   }
 
   .logoSvg {
     height: 36px;
   }
 
-  .header {
-    padding: 8px var(--container-padding-mobile);
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
   .mobileMenu {
-    display: flex;
+    padding: 8px var(--container-padding-mobile) 24px;
   }
 }

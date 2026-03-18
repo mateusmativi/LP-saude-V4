@@ -16,18 +16,11 @@ export default function Hero() {
     >
       {/* Background image + gradient overlay */}
       <div className={styles.bgLayer} aria-hidden="true">
-        <img
-          src={desktop.mainContainer}
-          alt=""
-          className={styles.bgImage}
-        />
-        <div
-          className={styles.bgGradient}
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1440 811' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-37.55 24.6 -43.679 -66.673 1031.5 253.5)'><stop stop-color='rgba(6,18,111,0)' offset='0'/><stop stop-color='rgba(10,20,95,0.98)' offset='1'/></radialGradient></defs></svg>\")",
-          }}
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/hero-image-mobile.jpg" />
+          <img src="/hero-image.jpg" alt="" className={styles.bgImage} />
+        </picture>
+        <div className={styles.bgGradient} />
       </div>
 
       {/* Content */}

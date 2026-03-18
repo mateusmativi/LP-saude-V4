@@ -63,15 +63,13 @@ export default function NaoBastar() {
             </ul>
 
             <p className={styles.bodyText}>
-              Mas esses sistemas genéricos{' '}
-              <strong>não resolvem todos os seus problemas.</strong>{' '}
-              Sua clínica tem processos únicos que precisam de soluções únicas.
+              Mas essas informações <strong>conversam entre si?</strong><br />
+              Você consegue ter <strong>um retrato da sua clínica em tempo real?</strong><br />
+              Eles entregam <strong>tudo que a sua clínica precisa?</strong>
             </p>
 
             <p className={styles.bodyText}>
-              A Fraktal desenvolve{' '}
-              <strong>sistemas 100% personalizados</strong>{' '}
-              que se encaixam perfeitamente na sua operação.
+              Se você respondeu <strong>NÃO</strong> para qualquer uma dessas perguntas, nós podemos ajudá-lo.
             </p>
           </div>
 
@@ -81,6 +79,13 @@ export default function NaoBastar() {
             data-name="buttonsDarkMode"
           >
             <span className={styles.ctaStateLayer} />
+            <img
+              src={desktop.checkBox}
+              alt=""
+              aria-hidden="true"
+              className={styles.ctaIcon}
+              data-name="check_box"
+            />
             <span className={styles.ctaLabel}>Resolva isso agora</span>
           </a>
         </div>

@@ -1,4 +1,4 @@
-/* ProcessSteps — Layout / 526 / — 404:2947 */
+/* ProcessSteps — Layout / 526 / — 404:3101 */
 
 .section {
   background-color: var(--gray-white);
@@ -15,7 +15,7 @@
   margin: 0 auto;
 }
 
-/* Section title */
+/* ---- Section title ---- */
 .sectionTitle {
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
 
 .heading {
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-heading-sm);
+  font-size: var(--font-size-heading-md);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   color: var(--blue-500);
@@ -37,71 +37,90 @@
 .subHeading {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body-lg);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-body);
-  color: var(--gray-grey-750);
-  margin: 0;
-}
-
-/* Steps grid — 5 columns on desktop */
-.stepsGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--gap-16);
-  width: 100%;
-}
-
-/* Step card */
-.stepCard {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-16);
-  align-items: flex-start;
-  padding: var(--gap-32);
-  border: 1px solid var(--blue-100);
-  border-radius: 8px;
-  background: var(--gray-white);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.stepCard:hover {
-  border-color: var(--blue-400);
-  box-shadow: 0 4px 24px rgba(2, 31, 255, 0.08);
-}
-
-.stepNumber {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-heading-sm);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
-  color: var(--blue-100);
-}
-
-.stepIcon {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-}
-
-.stepTitle {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-heading);
-  color: var(--blue-900);
-  margin: 0;
-}
-
-.stepDescription {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body);
   color: var(--gray-grey-750);
   margin: 0;
 }
 
-/* CTA */
+/* ---- Card layout ---- */
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-24);
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: var(--gap-24);
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Bottom row: 2 cards centered, same width as top-row cards */
+.rowBottom {
+  justify-content: center;
+}
+
+.rowBottom .stepCard {
+  flex: 0 0 calc((100% - var(--gap-24) * 2) / 3);
+  max-width: calc((100% - var(--gap-24) * 2) / 3);
+}
+
+/* ---- Step card ---- */
+.stepCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-16);
+  align-items: flex-start;
+  padding: var(--gap-32);
+  background: var(--gray-grey-150, #eff0f5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--blue-500);
+  margin: 0;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+}
+
+.stepDesc {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--gray-grey-750);
+  margin: 0;
+}
+
+.stepDescBold {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-body);
+  color: var(--gray-grey-750);
+  margin: 0;
+}
+
+/* ---- CTA ---- */
 .ctaButton {
   position: relative;
   display: inline-flex;
@@ -137,47 +156,28 @@
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 1024px) {
-  .stepsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .section {
     padding: var(--section-padding-md) var(--container-padding-mobile);
   }
 
-  .stepsGrid {
-    grid-template-columns: 1fr;
-    gap: var(--gap-12);
+  .cardWrapper {
+    gap: var(--gap-24);
   }
 
-  .stepCard {
-    padding: var(--gap-24);
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  .row,
+  .rowBottom {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  .stepNumber {
-    font-size: var(--font-size-body-lg);
-    color: var(--blue-400);
-    order: 0;
+  .rowBottom .stepCard {
+    flex: none;
+    max-width: 100%;
     width: 100%;
   }
 
-  .stepIcon {
-    order: 1;
-  }
-
-  .stepTitle {
-    order: 2;
-    font-size: var(--font-size-body-lg);
-  }
-
-  .stepDescription {
-    order: 3;
+  .stepCard {
     width: 100%;
   }
 

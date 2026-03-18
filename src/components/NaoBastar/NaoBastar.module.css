@@ -111,7 +111,7 @@
 }
 
 .bodyText strong {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* CTA Button */
@@ -132,6 +132,14 @@
 
 .ctaButton:hover {
   opacity: 0.9;
+}
+
+.ctaIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  /* Colorize icon to --blue-500 (#021fff) */
+  filter: brightness(0) saturate(100%) invert(13%) sepia(96%) saturate(7481%) hue-rotate(234deg) brightness(102%);
 }
 
 .ctaStateLayer {

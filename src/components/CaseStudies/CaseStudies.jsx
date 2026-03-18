@@ -1,46 +1,33 @@
-import { desktop } from '../../assets/images';
 import styles from './CaseStudies.module.css';
 
 /**
  * CaseStudies — Layout / 313 /
- * "Resultados que falam por si" — grid de cases de sucesso
- * Desktop node: 404:3497 | Mobile: responsive
+ * Desktop: 407:3843 | Mobile: 432:3153
+ * Título esquerda, desc+ícone direita; cards sem logo/tag/borda
  */
+const PLACEHOLDER = 'https://www.figma.com/api/mcp/asset/0aeedb75-4afd-4768-8217-ad6506dd153c';
+const ICON        = 'https://www.figma.com/api/mcp/asset/7d689bb7-7012-4595-bea9-2b7d70ec1eba';
+
 const cases = [
   {
-    id: 'brinks',
     name: 'Brinks',
-    logo: 'logo02',
-    description: 'Sistema de gestão operacional para transporte de valores.',
-    tag: 'Segurança',
+    description: 'Reduzimos o tempo de precificação de propostas com um sistema inteligente que substituiu planilhas manuais por uma calculadora instantânea.',
   },
   {
-    id: 'amcham',
     name: 'Amcham Brasil',
-    logo: 'logo03',
-    description: 'Plataforma de eventos e gestão de membros para câmara de comércio.',
-    tag: 'Associações',
+    description: 'Desenvolvemos um CMS proprietário e robusto, com UX/UI 100% customizado que já está na 2ª versão, com implementamos melhorias contínuas.',
   },
   {
-    id: 'pontua',
     name: 'Pontua AI',
-    logo: 'logo04',
-    description: 'Inteligência artificial para análise de risco de crédito.',
-    tag: 'Fintech',
+    description: 'Criamos uma plataforma de inteligência artificial educacional que corrige redações com velocidade, critérios ajustáveis e dashboards de desempenho.',
   },
   {
-    id: 'soacred',
     name: 'Soacred',
-    logo: 'logo05',
-    description: 'Sistema de crédito consignado e gestão financeira.',
-    tag: 'Financeiro',
+    description: 'Transformamos a rotina de lojistas com um app intuitivo que integra crédito, cadastros e transparência em tempo real.',
   },
   {
-    id: 'propwase',
     name: 'Propwase',
-    logo: 'logo06',
-    description: 'Plataforma de gestão de propriedades e contratos.',
-    tag: 'Imobiliário',
+    description: 'Centralizamos CRM, leads e gestão imobiliária em uma única plataforma com IA e automação total.',
   },
 ];
 
@@ -49,44 +36,45 @@ export default function CaseStudies() {
     <section
       className={styles.section}
       data-name="Layout / 313 /"
-      data-node-id="404:3497"
+      data-node-id="407:3843"
     >
       <div className={styles.container}>
-        {/* Section header */}
-        <div className={styles.sectionHeader}>
+        {/* Título — esquerda */}
+        <div className={styles.titleWrapper}>
+          <h2 className={styles.heading}>
+            Resultados que{' '}
+            <span className={styles.headingHighlight}>falam por si</span>
+          </h2>
+        </div>
+
+        {/* Descrição — desktop: direita | mobile: entre cards e CTAs */}
+        <div className={styles.descBlock}>
           <img
-            src={desktop.editorChoice}
+            src={ICON}
             alt=""
             aria-hidden="true"
-            className={styles.headerIcon}
+            className={styles.descIcon}
             data-name="editor_choice"
           />
-          <h2 className={styles.heading}>
-            Resultados que falam por si
-          </h2>
-          <p className={styles.subHeading}>
-            Empresas que escolheram transformar sua operação com a Fraktal.
+          <p className={styles.descText}>
+            Empresas líderes já transformaram seus processos com a{' '}
+            <strong className={styles.descHighlight}>Fraktal</strong>.
           </p>
         </div>
 
-        {/* Cases grid */}
-        <div className={styles.casesGrid} data-name="Cases">
+        {/* Cards */}
+        <div className={styles.casesRow} data-name="Row">
           {cases.map((c) => (
-            <div key={c.id} className={styles.caseCard} data-name={c.name}>
-              <div className={styles.caseImageWrapper}>
+            <div key={c.name} className={styles.caseCard} data-name={c.name}>
+              <div className={styles.caseImageWrapper} data-name="Placeholder Image">
                 <img
-                  src={desktop.placeholderImage}
-                  alt={`Case ${c.name}`}
+                  src={PLACEHOLDER}
+                  alt={c.name}
                   className={styles.caseImage}
                 />
               </div>
-              <div className={styles.caseBody}>
-                <span className={styles.caseTag}>{c.tag}</span>
-                <img
-                  src={desktop[c.logo]}
-                  alt={c.name}
-                  className={styles.caseLogo}
-                />
+              <div className={styles.caseContent} data-name="Content">
+                <h3 className={styles.caseTitle}>{c.name}</h3>
                 <p className={styles.caseDescription}>{c.description}</p>
               </div>
             </div>
@@ -94,12 +82,12 @@ export default function CaseStudies() {
         </div>
 
         {/* CTAs */}
-        <div className={styles.ctaRow}>
-          <a href="#fale-conosco" className={styles.ctaPrimary}>
+        <div className={styles.ctaRow} data-name="CTA Wrapper">
+          <a href="#fale-conosco" className={styles.ctaPrimary} data-name="buttonsDarkMode">
             <span className={styles.ctaStateLayer} />
             <span>Transforme sua clínica agora</span>
           </a>
-          <a href="#projetos" className={styles.ctaSecondary}>
+          <a href="#projetos" className={styles.ctaSecondary} data-name="buttonsDarkMode">
             <span className={styles.ctaStateLayer} />
             <span>Ver projetos</span>
           </a>

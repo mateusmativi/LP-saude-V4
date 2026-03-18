@@ -30,14 +30,15 @@ export const desktop = {
   calendarMonth:      'https://www.figma.com/api/mcp/asset/14795f19-7a4f-4c60-970a-a2861ac2a5e7',
   recentPatient:      'https://www.figma.com/api/mcp/asset/5af9acc0-a56a-4725-91bb-1d6dc19b78f3',
   overviewKey:        'https://www.figma.com/api/mcp/asset/91e7039d-cd68-4128-87ed-34a205724f43',
+  checkBox:           'https://www.figma.com/api/mcp/asset/b14d07b7-e2d8-4a9f-9c6c-71eb0fc38d1d',
   image:              'https://www.figma.com/api/mcp/asset/1abe6022-0dcf-4f43-bf4d-013a76406334',
 
   // Layout/526 — Process steps
-  psychology:      'https://www.figma.com/api/mcp/asset/6360ccf7-58ec-4522-b9b4-3501360e38c9',
-  developerBoard:  'https://www.figma.com/api/mcp/asset/18ef5808-d50c-41e1-aa1b-d952ac77895e',
-  mobileCode:      'https://www.figma.com/api/mcp/asset/3b12212d-5274-46f0-be50-4dc40d27f2d2',
-  localPolice:     'https://www.figma.com/api/mcp/asset/249525b1-f260-4cad-8c4f-439174f85ccf',
-  settingsHeart:   'https://www.figma.com/api/mcp/asset/1b8e1296-b019-4338-94bc-d92ffae895ab',
+  psychology:      'https://www.figma.com/api/mcp/asset/f7dd0aaf-02da-48da-a275-0f0331f03eaa',
+  developerBoard:  'https://www.figma.com/api/mcp/asset/abc0d2be-074a-42b9-bac4-11880d7d34d0',
+  mobileCode:      'https://www.figma.com/api/mcp/asset/5b01dd7c-a9d7-4c33-8b5e-cd0982beefec',
+  localPolice:     'https://www.figma.com/api/mcp/asset/1d680711-949f-4b1f-9db7-26d7aadb1632',
+  settingsHeart:   'https://www.figma.com/api/mcp/asset/dbda7c9c-2d48-422c-8fee-73383645c16f',
 
   // Banner / Quote
   awardStar:       'https://www.figma.com/api/mcp/asset/e7a9f74c-06ce-46dc-b362-623d5deaf89e',
@@ -55,22 +56,22 @@ export const desktop = {
   logo06:          'https://www.figma.com/api/mcp/asset/2e76eeff-e576-40b9-95ba-9e627db62b22',
 
   // Features / Layout/612
-  analytics:       'https://www.figma.com/api/mcp/asset/6009ea54-ce82-4e5e-a183-61269d6f1d48',
-  task:            'https://www.figma.com/api/mcp/asset/32b2e0a5-4444-4475-853a-771e0caca6ad',
-  engineering:     'https://www.figma.com/api/mcp/asset/17a24e87-d4f0-4457-a712-0f38135d4bfe',
-  paid:            'https://www.figma.com/api/mcp/asset/06eae779-2a64-4101-87cf-29581487a892',
+  analytics:       'https://www.figma.com/api/mcp/asset/b141a684-73d0-4ec2-b80c-f2a57d653383',
+  task:            'https://www.figma.com/api/mcp/asset/616732e2-c16a-48ff-8ef6-a7be2dc34f2d',
+  engineering:     'https://www.figma.com/api/mcp/asset/e95b6d04-2661-4eb0-93bc-1bdf220f3b87',
+  paid:            'https://www.figma.com/api/mcp/asset/a650c640-8059-42b4-8287-8dc4a82af955',
 
   // Team / Layout/521
-  chessBishop:     'https://www.figma.com/api/mcp/asset/27938588-e860-428c-a69b-325cf3301b60',
-  acute:           'https://www.figma.com/api/mcp/asset/c9eb769a-51ad-42ea-8b19-c3f17e04680b',
-  pallet:          'https://www.figma.com/api/mcp/asset/ecc14903-d903-4100-8ddb-e4610c697b25',
-  diamond:         'https://www.figma.com/api/mcp/asset/5c04341d-39d1-4345-992f-bfb18c5f7f1e',
-  devices:         'https://www.figma.com/api/mcp/asset/a22b9693-84b8-4d79-9e1c-0e10aa30c8cb',
-  modeling:        'https://www.figma.com/api/mcp/asset/3e800440-49f4-4efd-b1fb-ebf3a60e9159',
-  database:        'https://www.figma.com/api/mcp/asset/8d2450c9-8ac1-47f8-9f90-1638b492e09b',
-  cloud:           'https://www.figma.com/api/mcp/asset/49e3888a-bba5-4c05-8856-7d0617e59e21',
-  categorySearch:  'https://www.figma.com/api/mcp/asset/70a5780e-06c9-4604-aa4d-b05b876fae77',
-  brandFamily:     'https://www.figma.com/api/mcp/asset/af994e57-334a-4250-9014-e035658783b6',
+  chessBishop:     'https://www.figma.com/api/mcp/asset/63c5c5f6-93c4-4eb9-94f4-203bd7ebed6d',
+  acute:           'https://www.figma.com/api/mcp/asset/1298aa04-a38b-43b2-a39e-b93c9d242aa0',
+  pallet:          'https://www.figma.com/api/mcp/asset/e26093bd-1b27-4f4d-92a2-a2ca5c1f3ce6',
+  diamond:         'https://www.figma.com/api/mcp/asset/e05d1d07-641e-4964-80b4-e7338741c633',
+  devices:         'https://www.figma.com/api/mcp/asset/16cd74c9-0278-4b37-a99d-787be187eb13',
+  modeling:        'https://www.figma.com/api/mcp/asset/4382de34-b392-4241-b800-227545400911',
+  database:        'https://www.figma.com/api/mcp/asset/8a25929a-7e74-473e-a672-ad29a770d247',
+  cloud:           'https://www.figma.com/api/mcp/asset/8dd9898e-ca4e-45eb-9f8c-4419861efdfb',
+  categorySearch:  'https://www.figma.com/api/mcp/asset/75cc8e9c-be8e-4d48-803a-3a8696fd5dec',
+  brandFamily:     'https://www.figma.com/api/mcp/asset/4a6683ec-83d3-4eb4-976a-89c6e8259a5d',
 
   // Footer / misc
   image40:         'https://www.figma.com/api/mcp/asset/8690f844-1cea-4872-8407-c55c67c38965',

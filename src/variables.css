@@ -13,6 +13,8 @@
   --blue-100: #e7ecfd;
 
   --gray-white: #ffffff;
+  --gray-grey-150: #eff0f5;
+  --gray-grey-700: #4b5170;
   --gray-grey-750: #40455f;
   --gray-grey-900: #0a0d29;
 
@@ -30,6 +32,8 @@
   --font-size-heading-lg: 48px;
   --font-size-heading-md: 40px;
   --font-size-heading-sm: 32px;
+  --font-size-heading-xs: 24px;
+  --font-size-heading-xxs: 20px;
   --font-size-body-xl: 20px;
   --font-size-body-lg: 18px;
   --font-size-body-md: 16px;

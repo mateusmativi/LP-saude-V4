@@ -4,8 +4,7 @@
   position: relative;
   width: 100%;
   height: 810px;
-  background: white;
-  border: 1px solid var(--blue-500);
+  background: #0A145F;
   overflow: hidden;
   display: flex;
   align-items: stretch;
@@ -21,19 +20,24 @@
 
 .bgImage {
   position: absolute;
-  top: 0;
-  left: 4.18%;
-  width: 106.77%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 70% 20%;
   max-width: none;
 }
 
 .bgGradient {
   position: absolute;
   inset: 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background: linear-gradient(
+    to right,
+    #0A145F 0%,
+    rgba(10, 20, 95, 0.88) 28%,
+    rgba(10, 20, 95, 0.35) 55%,
+    transparent 75%
+  );
 }
 
 /* Content */
@@ -41,6 +45,8 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,7 +63,7 @@
 
 /* Text column */
 .textAndButtonContainer {
-  flex: 1 0 0;
+  flex: 0 0 50%;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -198,18 +204,45 @@
 }
 
 /* ---- Responsive ---- */
+
+/* Tablet: 769px – 1024px — empilha layout, texto passa para 100% */
+@media (max-width: 1024px) {
+  .textAndButtonContainer {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .footerBar {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     height: auto;
     min-height: 706px;
-    border: none;
+    background-color: #0A145F;
+  }
+
+  /* Bloco superior: imagem mobile (gradient baked-in) cobre ~55% do topo */
+  .bgLayer {
+    height: 55%;
+  }
+
+  /* Gradiente já está na imagem mobile — ocultar overlay */
+  .bgGradient {
+    display: none;
   }
 
   .bgImage {
-    left: -50.4%;
-    width: 174.72%;
-    height: 48.65%;
-    top: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center 15%;
   }
 
   .mainContainer {
