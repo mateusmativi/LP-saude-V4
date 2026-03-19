@@ -151,6 +151,7 @@
     flex: none;
     width: 100%;
     min-width: unset;
+    max-width: unset;
   }
 
   .ctaButton {
