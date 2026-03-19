@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import styles from './CaseStudies.module.css';
 
 /**
@@ -82,13 +82,16 @@ export default function CaseStudies() {
   // Mantém ref sincronizada para uso em callbacks sem stale closure
   useEffect(() => { indexRef.current = index; }, [index]);
 
-  // Observa largura do viewport do carrossel
-  useEffect(() => {
-    const ro = new ResizeObserver(entries => {
-      setViewportWidth(entries[0].contentRect.width);
-    });
-    if (viewportRef.current) ro.observe(viewportRef.current);
-    return () => ro.disconnect();
+  // Mede largura do viewport antes do primeiro paint e ao redimensionar
+  useLayoutEffect(() => {
+    function measure() {
+      if (viewportRef.current) {
+        setViewportWidth(viewportRef.current.offsetWidth);
+      }
+    }
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
   }, []);
 
   // Reabilita animação após jump silencioso
