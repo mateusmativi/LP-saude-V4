@@ -78,7 +78,7 @@
 
 /* ---- Client area buttons ---- */
 .clientAreaButton {
-  display: flex;
+  display: none; /* temporariamente oculto — será reativado em versão futura */
   align-items: center;
   gap: 14px;
   flex-shrink: 0;
@@ -262,7 +262,7 @@
   }
 
   .tabletActions {
-    display: flex;
+    display: none; /* temporariamente oculto — será reativado em versão futura */
   }
 }
 
