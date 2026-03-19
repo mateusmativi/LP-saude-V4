@@ -38,7 +38,7 @@
 
 /* ---- Desktop navigation (>1024px) ---- */
 .navigation {
-  display: flex;
+  display: none; /* temporariamente oculto — será reativado em versão futura */
   align-items: center;
   gap: 56px;
   flex-shrink: 0;
