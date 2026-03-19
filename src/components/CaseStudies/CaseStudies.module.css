@@ -169,7 +169,7 @@
 
 .ctaPrimary,
 .ctaSecondary {
-  display: none; /* temporariamente oculto — será reativado em versão futura */
+  display: inline-flex;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -192,6 +192,7 @@
 }
 
 .ctaSecondary {
+  display: none; /* temporariamente oculto — será reativado em versão futura */
   background: transparent;
   color: var(--button-stroked-content);
   border: 1px solid var(--button-stroked-border);
