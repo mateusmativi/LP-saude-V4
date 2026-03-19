@@ -227,7 +227,9 @@
 .mobileClientButton {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  width: 100%;
   padding: var(--button-padding-tb-sm) var(--button-padding-lr-sm);
   border: 1px solid var(--button-stroked-border);
   border-radius: var(--button-radius-sm);
